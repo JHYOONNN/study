@@ -1,4 +1,4 @@
-#Server
+# Server
 xxx.xxx.xxx.xxx의 42억개 주소가 모두 동나버림.
 
 그래서 나온 것이 IPv6 -> 앞으로 천년 뒤에도 사용할 수 있을 만큼 넉넉한 수
@@ -9,7 +9,7 @@ xxx.xxx.xxx.xxx의 42억개 주소가 모두 동나버림.
 
 Client -> Server가 되는 것은 소비자 -> 생산자가 되는 것.
 
-##Router(공유기)
+## Router(공유기)
 
 IP address -> 인터넷을 사용하기 위해서는 컴퓨터가 IP주소를 가지고 있어야 함.
 
@@ -33,7 +33,7 @@ LAN선이나 무선으로 연결되어 있는 각각의 컴퓨터(스마트폰)�
 WAN이 가지고 있는 IP는 외부에서 접속할 수 있는 Public IP Address, 각각의 긱기의 IP는 Private IP Address로 외부에서 IP로 접속할 수 없음.
 (192.168.0.0-192.168.255.255 사이에 있는 값, 이 외의 값은 Public IP라는 것을 알 수 있음)
 
-##NAT(Network Address Translation)
+## NAT(Network Address Translation)
 NAT덕분에 외부 인터넷에 접근할 수 있음.
 
 인터넷 사이트에 접속 -> 내 컴퓨터가 공유기에게 신호를 보냄. -> 내부 IP가 아닌 IP를 요청했기 때문에 요청을 WAN을 통해서 외부 인터넷으로 요청을 보냄.
@@ -46,16 +46,16 @@ NAT덕분에 외부 인터넷에 접근할 수 있음.
 
 여기까지는 Client로써 NAT가 작동하는 과정.
 
-###그렇다면 Home Server로 이용하기 위해서는?
+### 그렇다면 Home Server로 이용하기 위해서는?
 
-##내 컴퓨터의 IP주소 알아보기
+## 내 컴퓨터의 IP주소 알아보기
 google에 what is my ip 검색해보면 Public IP Address 알 수 있음.
 
-##포트(port)
+## 포트(port)
 
 공유기로 접속이 왔을 때 어떤 컴퓨터가 서버인가.를 해주는 역할
 
-###포트란?
+### 포트란?
 
 포트는 항구라는 뜻. 각각의 배들은 각자 번호를 가지고 있고 이에 맞는 항구 내부의 번호가 있음.
 
@@ -73,7 +73,7 @@ Game server, chatting server,... 다양한 서버가 있고 특정 컴퓨터에 
 
 예를 들어 http://opentutorials.rog 에 접속하게 되면 자동으로 80포트로 연결하게 됨. 만약 8080포트에 접속하고 싶다면 http://opentutorials.org:8080 으로 접속하면 됨.
 
-##포트 포워딩(Port Fowarding)
+## 포트 포워딩(Port Fowarding)
 
 사용자들이 Public IP Address로 접속했을 때 192.168.0.4로 접속할 수 있도록 해주는 것이 port임.
 
