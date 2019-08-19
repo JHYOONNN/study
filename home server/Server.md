@@ -33,11 +33,7 @@ LAN선이나 무선으로 연결되어 있는 각각의 컴퓨터(스마트폰)�
 WAN이 가지고 있는 IP는 외부에서 접속할 수 있는 Public IP Address, 각각의 긱기의 IP는 Private IP Address로 외부에서 IP로 접속할 수 없음.
 (192.168.0.0-192.168.255.255 사이에 있는 값, 이 외의 값은 Public IP라는 것을 알 수 있음)
 
-<<<<<<< HEAD
 ## NAT (Network Address Translation)
-=======
-## NAT(Network Address Translation)
->>>>>>> 9a1d837fa8aea67b23845dccdcd6c7b50e420056
 NAT덕분에 외부 인터넷에 접근할 수 있음.
 
 인터넷 사이트에 접속 -> 내 컴퓨터가 공유기에게 신호를 보냄. -> 내부 IP가 아닌 IP를 요청했기 때문에 요청을 WAN을 통해서 외부 인터넷으로 요청을 보냄.
@@ -75,7 +71,7 @@ Game server, chatting server,... 다양한 서버가 있고 특정 컴퓨터에 
 
 관습적으로 80포트가 사용중일 때 웹서버를 하나 더 추가하고 싶으면 8080포트에 추가하게 됨.(listening을 시킨다고 함.)
 
-예를 들어 http://opentutorials.rog 에 접속하게 되면 자동으로 80포트로 연결하게 됨. 만약 8080포트에 접속하고 싶다면 http://opentutorials.org:8080 으로 접속하면 됨.
+예를 들어 http://opentutorials.org 에 접속하게 되면 자동으로 80포트로 연결하게 됨. 만약 8080포트에 접속하고 싶다면 http://opentutorials.org:8080 으로 접속하면 됨.
 
 ## 포트 포워딩(Port Fowarding)
 
@@ -117,4 +113,10 @@ DHCP는 각각의 기기에 동적으로 IP Address, subnet, dns ... 등등을 �
 
 우리 각각의 기기는 고유의 통신 부품의 식별자를 가지고 있음, 이 를 MAC Address(Physical Address)라고 함.
 
-기기(DHCP Client)는 DHCP 서버에 MAC주소를 주고 자신에게 IP Address 할당을 요구함. 그러면 DHCP Server는 자신에게 할당되어 있는 모든 기기의 Mac과 이에 할당된 IP주소를 가지고 있고, 이에 중복되지 않는 IP주소를 할당해 주게 됨. 
+기기(DHCP Client)는 DHCP 서버에 MAC주소를 주고 자신에게 IP Address 할당을 요구함. 그러면 DHCP Server는 자신에게 할당되어 있는 모든 기기의 Mac과 이에 할당된 IP주소를 가지고 있고, 이에 중복되지 않는 IP주소를 할당해 주게 됨.
+
+DHCP서버의 제어는 공유기 페이지에서 내부 네트워크 설정 항목을 통해 설정할 수 있음
+
+사용중인 IP주소 정보를 보면 MAC add와 이에 할당 된 IP주소를 볼 수 있음.
+
+test
