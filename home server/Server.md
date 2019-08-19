@@ -33,9 +33,6 @@ LAN선이나 무선으로 연결되어 있는 각각의 컴퓨터(스마트폰)�
 WAN이 가지고 있는 IP는 외부에서 접속할 수 있는 Public IP Address, 각각의 긱기의 IP는 Private IP Address로 외부에서 IP로 접속할 수 없음.
 (192.168.0.0-192.168.255.255 사이에 있는 값, 이 외의 값은 Public IP라는 것을 알 수 있음)
 
-<<<<<<< HEAD
-## NAT (Network Address Translation)
-=======
 ## NAT(Network Address Translation)
 NAT덕분에 외부 인터넷에 접근할 수 있음.
 
