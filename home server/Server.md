@@ -1,4 +1,4 @@
-#Server
+# Server
 xxx.xxx.xxx.xxx의 42억개 주소가 모두 동나버림.
 
 그래서 나온 것이 IPv6 -> 앞으로 천년 뒤에도 사용할 수 있을 만큼 넉넉한 수
@@ -9,7 +9,7 @@ xxx.xxx.xxx.xxx의 42억개 주소가 모두 동나버림.
 
 Client -> Server가 되는 것은 소비자 -> 생산자가 되는 것.
 
-##Router(공유기)
+## Router(공유기)
 
 IP address -> 인터넷을 사용하기 위해서는 컴퓨터가 IP주소를 가지고 있어야 함.
 
@@ -33,7 +33,7 @@ LAN선이나 무선으로 연결되어 있는 각각의 컴퓨터(스마트폰)�
 WAN이 가지고 있는 IP는 외부에서 접속할 수 있는 Public IP Address, 각각의 긱기의 IP는 Private IP Address로 외부에서 IP로 접속할 수 없음.
 (192.168.0.0-192.168.255.255 사이에 있는 값, 이 외의 값은 Public IP라는 것을 알 수 있음)
 
-##NAT(Network Address Translation)
+## NAT (Network Address Translation)
 NAT덕분에 외부 인터넷에 접근할 수 있음.
 
 인터넷 사이트에 접속 -> 내 컴퓨터가 공유기에게 신호를 보냄. -> 내부 IP가 아닌 IP를 요청했기 때문에 요청을 WAN을 통해서 외부 인터넷으로 요청을 보냄.
@@ -46,16 +46,16 @@ NAT덕분에 외부 인터넷에 접근할 수 있음.
 
 여기까지는 Client로써 NAT가 작동하는 과정.
 
-###그렇다면 Home Server로 이용하기 위해서는?
+### 그렇다면 Home Server로 이용하기 위해서는?
 
-##내 컴퓨터의 IP주소 알아보기
+## 내 컴퓨터의 IP주소 알아보기
 google에 what is my ip 검색해보면 Public IP Address 알 수 있음.
 
-##포트(port)
+## 포트(port)
 
 공유기로 접속이 왔을 때 어떤 컴퓨터가 서버인가.를 해주는 역할
 
-###포트란?
+### 포트란?
 
 포트는 항구라는 뜻. 각각의 배들은 각자 번호를 가지고 있고 이에 맞는 항구 내부의 번호가 있음.
 
@@ -73,7 +73,7 @@ Game server, chatting server,... 다양한 서버가 있고 특정 컴퓨터에 
 
 예를 들어 http://opentutorials.rog 에 접속하게 되면 자동으로 80포트로 연결하게 됨. 만약 8080포트에 접속하고 싶다면 http://opentutorials.org:8080 으로 접속하면 됨.
 
-##포트 포워딩(Port Fowarding)
+## 포트 포워딩(Port Fowarding)
 
 사용자들이 Public IP Address로 접속했을 때 192.168.0.4로 접속할 수 있도록 해주는 것이 port임.
 
@@ -86,3 +86,31 @@ Game server, chatting server,... 다양한 서버가 있고 특정 컴퓨터에 
 보내주는 설정을 하는 방법을 알아보는 시간.
 
 이거는 아까 봤던 iptime의 NAT/Router 관리의 포트포워딩 설정에서 할 수 있음.
+
+## 유동 아이피(Dynamic IP Address)와 고정 아이피(Static IP Address)
+
+ISP(Internet Service Provider)와 계약을 통해 IP주소를 얻게 되 다른 사람이 이 주소로 접근할 수 있음.
+
+하지만 모든 집집마다 IP를 하나씩 주다보면 IP가 모자라고 이를 해결하기 위해 나온 것이 유동IP임(돌려막기)
+
+인터넷을 안쓰면 ISP가 IP주소를 회수하고 이를 다른 사용자에게 배정해줌. 그리고 다시 접속하면 또 새로운 IP주소를 발급해줌. (IP가 Dynamic하게 변함)
+
+문제는 웹서버와 같은 서버를 깔아놓으면, Client가 다시 접속하려 하면 예전 IP주소로 접속하게 된다.
+
+이를 해결하기 위한 방법이 Static IP Address(추가로 돈내야 함.)
+
+## DHCP(Dynamic Host Configuration Protocol)
+
+통신 규칙
+
+### 자신의 IP주소를 변경하는 방법
+
+IP Address는 같은 범위 내에서 절대로 중복되서는 안됨.
+
+(윈도우에서 IP주소 변경하는 방법 나오는데 필요하면 보면 될듯)
+
+DHCP는 각각의 기기에 동적으로 IP Address, subnet, dns ... 등등을 할당해줌.(DHCP Server에서 이루어짐.)
+
+우리 각각의 기기는 고유의 통신 부품의 식별자를 가지고 있음, 이 를 MAC Address(Physical Address)라고 함.
+
+기기(DHCP Client)는 DHCP 서버에 MAC주소를 주고 자신에게 IP Address 할당을 요구함. 그러면 DHCP Server는 자신에게 할당되어 있는 모든 기기의 Mac과 이에 할당된 IP주소를 가지고 있고, 이에 중복되지 않는 IP주소를 할당해 주게 됨. 
