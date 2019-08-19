@@ -37,7 +37,6 @@ WAN이 가지고 있는 IP는 외부에서 접속할 수 있는 Public IP Addres
 ## NAT (Network Address Translation)
 =======
 ## NAT(Network Address Translation)
->>>>>>> 9a1d837fa8aea67b23845dccdcd6c7b50e420056
 NAT덕분에 외부 인터넷에 접근할 수 있음.
 
 인터넷 사이트에 접속 -> 내 컴퓨터가 공유기에게 신호를 보냄. -> 내부 IP가 아닌 IP를 요청했기 때문에 요청을 WAN을 통해서 외부 인터넷으로 요청을 보냄.
